@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="UTF-8"> <!--规定了文档字符的编码为UTF-8-->
+    <title>任务1:九宫格——用html+css制作一个网页 </title> <!--将title写为任务的标题，也就是打开以后的网页标签页上的文字-->
+    <style> /*接下来用style定义文档的样式信息，注意style在head部分*/
+        * { padding: 0; margin: 0; } /*内边距和外边距都是0*/
+
+        .main {/*<main> 元素中的内容对于文档来说应当是唯一的。它不应包含在文档中重复出现的内容，比如侧栏、导航栏、版权信息、站点标志或搜索表单。*/
+             
+            width: 82%;/*宽度*/
+            text-align: center; /*我觉得还是没有对齐，把margin设为auto也没能成功……求助TAT*/
+        }
+
+        .main>div {
+            width: 25%;
+            padding-bottom: 25%;
+            border: 1%；
+            solid #fff;
+            background-color: #FFA600;
+            border-radius: 9%;/*边框圆角*/
+            float: right;/*决定了堆的方向，从左往右堆就是left*/
+            margin: 1%;/*决定了缝隙有多宽*/
+        }
+    </style>
+</head>
+<body>
+    <div class="main" style="text-align: center；"> <!--这里尝试居中也失败了-->
+    	<!--做九个那样的小格，它是基于位置排出来的，三个一排（由于设好了宽度的百分比），第四个就会自动跑到下一行去-->
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+        <div class="box8"></div>
+        <div class="box9"></div>
+    </div>
+</body>
+</html>
